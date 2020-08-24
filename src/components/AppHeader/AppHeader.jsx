@@ -4,10 +4,12 @@ import { NavLink } from 'react-router-dom'
 
 import { headerLinks } from '@/data';
 
-import { HeaderWrap } from './style';
-
 import { Input, Button } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
+
+import { HeaderWrap } from './style';
+
+
 
 export default memo(function AppHeader() {
 
@@ -15,7 +17,7 @@ export default memo(function AppHeader() {
   const showItem = (item, index) => {
     if (index < 3) {
       return (
-        <NavLink to={item.link} exact>
+        <NavLink to={item.link}>
           {item.title} <i className="sprite_01 icon"></i>
         </NavLink>
       )

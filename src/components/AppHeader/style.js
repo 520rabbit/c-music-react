@@ -15,9 +15,8 @@ export const HeaderWrap = styled.div`
       .logo {
         display: block;
         background-position: 0 0;
-        width: 157px;
-        height: 100%;
-        padding-right: 20px;
+        width: 176px;
+        height: 100%; 
         text-indent: -9999px;
       }
       .nav-router {
