@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useRef, useState, useCallback } from 'react'
 import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 
-import { getBannersData } from '../store/actions'
+import { getBannersData } from '../../store/actions'
 
 import { Carousel } from 'antd'
 import { BannerWrap } from './style'
@@ -30,7 +30,7 @@ export default memo(function Banner() {
   },[])
 
   const bgImage = recommendBanners[currentIndex] && (recommendBanners[currentIndex].imageUrl + "?imageView&blur=40x20")
- 
+
   return (
     <BannerWrap bgImage={bgImage}>
       <div className="banner-img wrap-v1">
