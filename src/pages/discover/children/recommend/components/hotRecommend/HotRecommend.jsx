@@ -3,6 +3,7 @@ import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 import { getHotRecommendsData } from '../../store/actions'
 
 import HeaderColumn from "@/components/common/headerColumn/HeaderColumn"
+import SongItem from "@/components/common/songItem/SongItem"
 
 import { HotWrap } from './style'
 export default memo(function HotRecommend() {
@@ -24,7 +25,7 @@ export default memo(function HotRecommend() {
         {
           recommendHotLists.map(item => {
             return(
-            <div key={item.id}>{item.name}</div>
+            <SongItem key={item.id} song={item} className="lists-item" />
             )
           })
         }

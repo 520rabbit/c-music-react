@@ -1,7 +1,9 @@
 import React, { memo } from 'react'
 import { ColumnWrap } from './style';
+import PropTypes from 'prop-types';
 
-export default memo(function HeaderColumn(props) {
+
+const HeaderColumn = memo(function (props) {
   const { title, lists } = props;
   return (
     <ColumnWrap className="sprite_02">
@@ -27,3 +29,14 @@ export default memo(function HeaderColumn(props) {
     </ColumnWrap>
   )
 })
+
+HeaderColumn.propTypes = {
+  title: PropTypes.string.isRequired,
+  lists: PropTypes.array
+}
+
+HeaderColumn.defaultProps = {
+  lists: []
+}
+
+export default HeaderColumn;
