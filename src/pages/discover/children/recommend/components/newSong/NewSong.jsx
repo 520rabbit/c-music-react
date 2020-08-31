@@ -39,7 +39,7 @@ export default memo(function NewSong() {
                         return (
                           <NewSongItem key={item.id}
                           item={item}
-                          size={110}
+                          size={106}
                           width={118}
                           bg="-570px" />
                         )

@@ -25,3 +25,13 @@ export function getNewSongs(limit) {
     }
   })
 }
+
+// 新碟上架
+export function getRanking(idx) {
+  return request({
+    url: "/top/list",
+    params: {
+      idx
+    }
+  })
+}
