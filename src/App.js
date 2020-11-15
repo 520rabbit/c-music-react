@@ -7,8 +7,8 @@ import { Provider } from 'react-redux'
 
 import store from './store' 
 
-import AppHeader from 'components/AppHeader/AppHeader'
-import AppFooter from 'components/AppFooter/AppFooter'
+import AppHeader from 'components/app-header/AppHeader'
+import AppFooter from 'components/app-footer/AppFooter'
 
 export default memo(function App() {
   return ( 

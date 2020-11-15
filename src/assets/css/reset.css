@@ -11,6 +11,12 @@ ul, ol, li {
   list-style: none;
 }
 
+div,p,h1,h2,h3,ul,li,ol,input,section {
+  box-sizing: border-box;
+}
+
+
+
 a {
   text-decoration: none;
   color: #666;

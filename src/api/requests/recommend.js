@@ -35,3 +35,13 @@ export function getRanking(idx) {
     }
   })
 }
+
+export function getArtist(limit, cat) {
+  return request({
+    url: "/artist/list",
+    params: {
+      cat,
+      limit
+    }
+  })
+}

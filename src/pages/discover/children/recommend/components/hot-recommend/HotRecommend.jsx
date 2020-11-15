@@ -2,8 +2,8 @@ import React, { memo, useEffect } from 'react'
 import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 import { getHotRecommendsData } from '../../store/actions'
 
-import HeaderColumn from "@/components/common/headerColumn/HeaderColumn"
-import SongItem from "@/components/common/songItem/SongItem"
+import HeaderColumn from "@/components/common/header-column/HeaderColumn"
+import SongItem from "@/components/common/song-item/SongItem"
 
 import { HotWrap } from './style'
 export default memo(function HotRecommend() {

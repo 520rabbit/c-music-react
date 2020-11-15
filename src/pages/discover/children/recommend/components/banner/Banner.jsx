@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useRef, useState, useCallback } from 'react'
 import { useSelector, useDispatch, shallowEqual } from 'react-redux'
-
+import imgUrl from '../../../../../../assets/img/download02.png'
 import { getBannersData } from '../../store/actions'
 
 import { Carousel } from 'antd'
@@ -16,7 +16,7 @@ export default memo(function Banner() {
     recommendBanners: state.getIn(['recommend', 'recommendBanners'])
   }), shallowEqual)
   const dispatch = useDispatch();
-   
+
   // 发送对应的网络请求
   useEffect(() => {
     dispatch(getBannersData())
@@ -27,7 +27,7 @@ export default memo(function Banner() {
   const bannerRef = useRef()
   const changeBanner = useCallback((from, to) => {
     setCurrentIndex(to)
-  },[])
+  }, [])
 
   const bgImage = recommendBanners[currentIndex] && (recommendBanners[currentIndex].imageUrl + "?imageView&blur=40x20")
 
@@ -38,15 +38,18 @@ export default memo(function Banner() {
           {
             recommendBanners.map((item, index) => {
               return (
-              <div className="item" key={item.imageUrl}>
-                <img className="image" src={item.imageUrl} alt={item.typeTitle} />
-              </div>
-            )
+                <div key={item.imageUrl}>
+                  <div className="item">
+                    <img className="image" src={item.imageUrl} alt={item.typeTitle} />
+                    <img className="download" src={imgUrl} alt={imgUrl}/>
+                  </div>
+                </div>
+              )
             })
           }
         </Carousel>
         <div className="carousel-left btn" onClick={e => bannerRef.current.prev()}></div>
-        <div className="carousel-right btn"  onClick={e => bannerRef.current.next()}></div> 
+        <div className="carousel-right btn" onClick={e => bannerRef.current.next()}></div>
       </div>
     </BannerWrap>
   )

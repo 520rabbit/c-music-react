@@ -3,9 +3,9 @@ import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 
 import { getNewSongsData } from '../../store/actions'
 
-import HeaderColumn from "@/components/common/headerColumn/HeaderColumn"
+import HeaderColumn from "@/components/common/header-column/HeaderColumn"
 
-import NewSongItem from "@/components/common/newSongItem/NewSongItem"
+import NewSongItem from "@/components/common/new-song-item/NewSongItem"
 
 import { Carousel } from 'antd'
 import { NewWrap } from './style'

@@ -6,10 +6,10 @@ const defautlState = Map({
   recommendBanners: [],
   recommendHotLists: [],
   recommendNewSongs: [],
-
   upRanking: {},
   newRanking: {},
   originRanking: {},
+  settleSingerLists: []
 }) 
 
 
@@ -27,6 +27,8 @@ function reducer(state = defautlState, action) {
       return state.set('newRanking', action.newRanking)
     case actionTypes.GET_ORIGIN_RANKING:
       return state.set('originRanking', action.originRanking)
+    case actionTypes.GET_SETTLT_SINGER:
+      return state.set('settleSingerLists', action.settleSingerLists)
     default: 
       return state
   }

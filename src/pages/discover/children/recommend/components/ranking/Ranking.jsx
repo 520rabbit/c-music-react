@@ -1,8 +1,8 @@
 import React, { memo, useEffect } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
-import HeaderColumn from "@/components/common/headerColumn/HeaderColumn"
-import RankingItem from '@/components/common/rankingItem/RankingItem';
+import HeaderColumn from "@/components/common/header-column/HeaderColumn"
+import RankingItem from '@/components/common/ranking-item/RankingItem';
 import { RankingWrapper } from './style';
 import { getRankingdata } from '../../store/actions';
 

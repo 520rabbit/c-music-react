@@ -4,14 +4,20 @@ export const BannerWrap = styled.div`
   width: 100%;
   background: url(${props => props.bgImage}) center center/8000px;
   min-width: 1200px;
-  height: 380px;
   .banner-img {
     position: relative; 
     .img-wrap {
       width: 1026px;
       margin: auto;
-      img {
-        width: 100%;
+      .item {
+        display: flex;
+        .image {
+          width: 748px;
+        }
+        .download {
+          flex:1;
+          height: 353px;
+        }
       }
     }
     .btn {

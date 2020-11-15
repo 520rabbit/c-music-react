@@ -1,11 +1,8 @@
 import React, { memo } from 'react'
 import { renderRoutes } from 'react-router-config'
 import { NavLink } from 'react-router-dom';
-
 import { dicoverMenu } from '@/data';
-
 import { DiscoverWrap } from './style';
-
 export default memo(function Discover(props) {
   const { route } = props
   return (
